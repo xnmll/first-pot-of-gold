@@ -1,0 +1,80 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="index.master.cs" Inherits="HTRoomMgmtInfoSys.from.index" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>酒店客房管理信息系统</title>
+    <link rel="stylesheet" href="/layui/css/layui.css" />
+    <link rel="stylesheet" href="/css/button.css" />
+    <script src="/layui/layui.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div class="layui-layout layui-layout-admin">
+              <div class="layui-header">
+                <div class="layui-logo">体育用品商城后台</div>
+                <!-- 头部区域（可配合layui已有的水平导航） -->
+                <ul class="layui-nav layui-layout-right">
+                  <li class="layui-nav-item">
+        
+                    <a href="javascript:;">
+                    <%--<img src="http://t.cn/RCzsdCq" class="layui-nav-img">--%>
+                    <asp:Label ID="Lb_user" runat="server" Text="Label">当前用户：</asp:Label>
+                    </a>
+                    <dl class="layui-nav-child">
+                      <dd><asp:LinkButton ID="Lb_OffLine" runat="server" OnClick="Lb_OffLine_Click">退出</asp:LinkButton></dd>
+                    </dl>
+                </ul>
+              </div>
+  
+              <div class="layui-side layui-bg-black">
+                <div class="layui-side-scroll">
+                  <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+                  <ul class="layui-nav layui-nav-tree"  lay-filter="test">
+                    <li class="layui-nav-item layui-nav-itemed">
+                        <a href="javascript:;">商品管理</a>
+                      <dl class="layui-nav-child">
+                        <dd><a href="showInfo.aspx">商品信息管理</a></dd>
+                        <dd><a href="addNewCommodity.aspx">添加新商品</a></dd>
+                      </dl>
+                    </li>
+                    <li class="layui-nav-item layui-nav-itemed">
+                        <a href="javascript:;">用户管理</a>
+                      <dl class="layui-nav-child">
+			            <dd><a href="userInfo.aspx">用户信息管理</a></dd>           
+                        <dd><a href="addNewUser.aspx">添加新用户</a></dd>
+                      </dl>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+  
+              <div class="layui-body">
+                <!-- 内容主体区域 -->
+                <div style="padding: 15px;">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+              </div>
+  
+              <div class="layui-footer">
+                <!-- 底部固定区域 -->
+                © HTRoomMgmtInfoSys Power By <a href="https:www.llanc.cn">llanc.cn</a>
+              </div>
+            </div>
+        </div>
+    </form>
+
+    <script>
+        //JavaScript代码区域
+        layui.use('element', function(){
+        var element = layui.element;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="reception.master.cs" Inherits="HTRoomMgmtInfoSys.form.reception" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author"      content="Sergey Pozhilov (GetTemplate.com)">
+	
+	<title>体育用品在线商城</title>
+
+    <link rel="stylesheet" href="/layui/css/layui.css" />
+    <link rel="stylesheet" href="/css/button.css" />
+
+	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
+	
+	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+	<!-- Custom styles for our template -->
+	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" >
+	<link rel="stylesheet" href="assets/css/main.css">
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="home">
+    <form id="form1" runat="server">
+    <!-- Fixed navbar -->
+	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
+		<div class="container">
+			<div class="navbar-header">
+				<!-- Button for smallest screens -->
+				
+				<a class="navbar-brand" href="main.aspx">体育用品在线商城</a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav pull-right">
+					<li><a href="main.aspx">商城首页</a></li>
+					<li><a href="about.aspx">体育运动小知识</a></li>
+					
+					<li><a href="purchase.aspx">购物车</a></li>
+					
+                        <asp:LinkButton ID="lbtn_log" class="btn" runat="server" OnClick="lbtn_log_Click" Text="登录"></asp:LinkButton>
+				</ul>
+			</div><!--/.nav-collapse -->
+		    
+		</div>
+	</div> 
+	<!-- /.navbar -->
+
+            
+
+        <%--主区域--%>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+         <%--end 主区域--%>
+
+
+
+
+
+    	<!-- Social links. @TODO: replace by link/instructions in template -->
+	<section id="social">
+		<div class="container">
+			<div class="wrapper clearfix">
+				<!-- AddThis Button BEGIN -->
+				<div class="addthis_toolbox addthis_default_style">
+				<a class="addthis_button_facebook_like" ></a>
+				<a class="addthis_button_tweet"></a>
+				<a class="addthis_button_linkedin_counter"></a>
+				<a class="addthis_button_google_plusone"></a>
+				</div>
+				<!-- AddThis Button END -->
+			</div>
+		</div>
+	</section>
+	<!-- /social links -->
+
+
+	<footer id="footer" class="top-space">
+
+		<div class="footer1">
+			<div class="container">
+				<div class="row">
+					
+					<div class="col-md-3 widget">
+						<h3 class="widget-title">联系我们</h3>
+						<div class="widget-body">
+							<p>+123 45 6789101010<br>
+								<a href="mailto:#">some.email@somewhere.com</a><br>
+								<br>
+								 北京市海淀区中关村北大街 1001号清华园
+							</p>	
+						</div>
+					</div>
+
+					<div class="col-md-3 widget">
+						<h3 class="widget-title">联系我们</h3>
+						<div class="widget-body">
+							<p class="follow-me-icons">
+								<a href=""><i class="fa fa-twitter fa-2"></i></a>
+								<a href=""><i class="fa fa-dribbble fa-2"></i></a>
+								<a href=""><i class="fa fa-github fa-2"></i></a>
+								<a href=""><i class="fa fa-facebook fa-2"></i></a>
+							</p>	
+						</div>
+					</div>
+
+					<div class="col-md-6 widget">
+						<h3 class="widget-title">营业理念</h3>
+						<div class="widget-body">
+							<p>用精致的服务为您提供优质的在线购物体验，无需走出家门便可购得质量最好的体育用品！</p>
+							<p>本网站主营各种体育用品、体育耗材。海外源头供货商保证质量，让你用的舒心，健康生活每一天！</p>
+						</div>
+					</div>
+
+				</div> <!-- /row of widgets -->
+			</div>
+		</div>
+
+		<div class="footer2">
+			<div class="container">
+				<div class="row">
+					
+					<div class="col-md-6 widget">
+						<div class="widget-body">
+							<p class="simplenav">
+								<a href="#">商城首页</a> | 
+								<a href="about.aspx">体育知识</a> |
+								<a href="purchase.aspx">购物车</a> |
+								<a href="https://www.llanc.cn">联系我</a>
+							</p>
+						</div>
+					</div>
+
+					<div class="col-md-6 widget">
+						<div class="widget-body">
+							<p class="text-right">
+								Copyright &copy; 2018, Your name. Designed by <a href="http://xnmll.cn/" rel="designer">XXXXXXXXX</a> 
+							</p>
+						</div>
+					</div>
+
+				</div> <!-- /row of widgets -->
+			</div>
+		</div>
+
+	</footer>
+    </form>
+</body>
+</html>
